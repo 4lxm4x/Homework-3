@@ -320,20 +320,56 @@ footer .button {
   letter-spacing: 0.03em;
 }
 
-.team .list .list {
+.team .list.socials {
   display: flex;
   justify-content: center;
 }
 
-.team .list .list li {
+.team .list.socials li {
+  height: 44px;
   padding: 12px;
   margin-right: 10px;
-  margin-bottom: -7px;
+
+  border-radius: 50%;
 }
 
-.team .list .list li:last-child {
+.team .list.socials li:hover,
+.team .list.socials li:focus {
+  background-color: var(--accent-color);
+}
+
+.team .list.socials li:last-child {
   margin-right: 0;
 }
+
+/* CLIENTS */
+
+.clients .section-header {
+  margin-bottom: 50px;
+}
+
+.clients .list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 94px;
+}
+
+.clients .list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients .list li {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 19px 65px;
+}
+
+.clients .list li:hover,
+.clients .list li:focus {
+  border: 1px solid var(--accent-color);
+}
+
+/* FOOTER */
 
 address {
   font-style: inherit;
