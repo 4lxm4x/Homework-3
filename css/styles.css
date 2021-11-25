@@ -14,6 +14,14 @@ html {
   box-sizing: inherit;
 }
 
+header {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  border-bottom: 1px solid #ececec;
+}
+
 body {
   font-family: 'Roboto';
   font-weight: 400;
@@ -33,6 +41,12 @@ a {
 
 .list {
   list-style: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* HEADER */
@@ -61,11 +75,12 @@ a {
   color: var(--accent-color);
 }
 
-.header {
+.header-bar {
   display: flex;
-  width: 1200px;
-  padding: 0px 15px;
-  align-items: center;
+
+  /* width: 1200px;
+  padding: 0px 15px; */
+  /* align-items: center; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -104,14 +119,14 @@ a {
 /* HERO */
 
 .hero {
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
 
   width: 1600px;
-  height: 600px;
+  /* height: 600px; */
 
   background-color: teal;
 }
@@ -151,11 +166,11 @@ footer .button {
 }
 /* ABOUT */
 .about {
-  width: 1200px;
-  padding: 0px 15px;
+  /* width: 1200px; */
+  padding: 94px 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
   /* background-color: #ccc; */
 }
 .list {
@@ -211,10 +226,10 @@ footer .button {
 }
 /* BUSINESS */
 .business {
-  margin-bottom: 94px;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  /* padding-top: 94px; */
+  padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -260,14 +275,16 @@ footer .button {
 
 /* TEAM */
 
+.team-section {
+  background-color: #f5f4fa;
+}
+
 .team {
   /* width: 1200px; */
   padding: 94px 0px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 94px;
-
-  background-color: #f5f4fa;
+  /* margin-bottom: 94px; */
 }
 
 .team .section-header {
@@ -344,6 +361,13 @@ footer .button {
 
 /* CLIENTS */
 
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .clients .section-header {
   margin-bottom: 50px;
 }
@@ -351,7 +375,7 @@ footer .button {
 .clients .list {
   display: flex;
   justify-content: center;
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
 }
 
 .clients .list li:not(:last-child) {
@@ -371,25 +395,68 @@ footer .button {
 
 /* FOOTER */
 
+.footer-section {
+  width: 1600px;
+  padding-left: 215px;
+  padding-right: 215px;
+  display: flex;
+  background-color: #2f303a;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 address {
   font-style: inherit;
+  margin-top: 20px;
+}
+
+.footer-social {
+  margin-right: 94px;
+}
+
+.footer-social li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social > .list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social li {
+  border-radius: 50%;
+
+  height: 20px;
+}
+
+.footer-social li:hover,
+.footer-social li:focus {
+  background-color: var(--accent-color);
 }
 
 .footer-appeal {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #ffffff;
-  background-color: pink;
+  color: #fff;
 }
 address ul::first-line {
   color: #fff;
-  background-color: pink;
 }
 
+.footer-address {
+  margin-right: 94px;
+}
+
+.footer-subscribe .button {
+  margin-left: 370px;
+}
 /* PORTFOLIO */
 
 .gallery-section .section-header {
@@ -398,7 +465,7 @@ address ul::first-line {
 
 .filter.list {
   margin-top: 93px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter .button {
@@ -435,12 +502,17 @@ address ul::first-line {
 .gallery {
   text-align: center;
   width: 1200px;
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .project {
   width: calc((100% - 2 * 30px) / 3);
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+}
+
+.project a {
+  background-color: tomato;
 }
 
 .project:not(:nth-child(3n)) {
@@ -456,15 +528,19 @@ address ul::first-line {
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 94px;
 }
 
 .project .type {
+  margin: 0px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  text-align: left;
 }
 
 .project .desc {
+  margin: 0;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -474,13 +550,22 @@ address ul::first-line {
 }
 
 .project h2 {
+  margin: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  text-align: left;
 
   letter-spacing: 0.06em;
 
   color: var(--header-dark-color);
+}
+
+.project-info {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 /* .parent {
